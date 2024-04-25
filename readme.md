@@ -32,3 +32,31 @@ class Ostrich : public Bird {
     // Ostrich não pode voar, então não herda de FlyingBird
 };
 ```
+
+# Princípio aberto/fechado
+
+O princípio aberto/fechado diz que uma classe deve ser fechada para modificações e abertas
+para extensões, ou seja, ela deve estar preparada caso uma subclasse dela precise de
+modificações e adaptações
+
+## Classe que não segue o princípio
+
+A classe a seguir não segue o princípio aberto/fechado pois se quisermos adicionar um novo tipo de forma, como um triângulo, teríamos que modificar a classe Drawing para lidar com essa nova forma
+
+```Cpp
+class Drawing {
+private:
+    std::vector<Shape*> shapes;
+
+public:
+    void addShape(Shape* shape) {
+        shapes.push_back(shape);
+    }
+
+    void drawAllShapes() const {
+        for (const auto& shape : shapes) {
+            shape->draw();
+        }
+    }
+};
+```
