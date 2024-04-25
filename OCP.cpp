@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+//adesão ao princípio OCP
 
 class Shape {
 public:
@@ -17,6 +18,13 @@ class Square : public Shape {
 public:
     void draw() const override {
         std::cout << "Desenhando um quadrado." << std::endl;
+    }
+};
+
+class Triangle : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Desenhando um triângulo." << std::endl;
     }
 };
 

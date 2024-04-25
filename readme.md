@@ -58,5 +58,20 @@ public:
             shape->draw();
         }
     }
+
+    //na main deveriamos modificar aqui
+};
+```
+
+## Correção da classe
+
+Agora com a adicão da classe 'Triangle' não precisamos modificar a classe Drawing para lidar com essa nova forma
+
+```Cpp
+class Triangle : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Desenhando um triângulo." << std::endl;
+    }
 };
 ```
