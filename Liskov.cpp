@@ -1,21 +1,13 @@
-// Exemplo de violação do LSP
-#include <stdexcept>
-
+// Exemplo de aderência ao LSP
 class Bird {
+    // ...
+};
 
+class FlyingBird : public Bird {
 public:
     virtual void fly() = 0;
-
 };
 
 class Ostrich : public Bird {
-
-public:
-    
-    void fly() override {
-        
-        throw std::runtime_error("Ostrich can't fly!");
-    
-    }
-
+    // Ostrich não pode voar, então não herda de FlyingBird
 };

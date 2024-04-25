@@ -8,8 +8,6 @@ nenhuma das propriedades desejaveis do programa
 
 A classe feita não segue o princípio de Liskov pois a classe 'Ostich' não consegue substituir a classe base 'Bird' em todos os contextos, porque o método 'fly' da classe 'Ostrich' lança uma exceção.
 
-DEVE TA DAORA A AULA AI NE MAN!!!
-
 ```Cpp
 class Ostrich : public Bird {
 
@@ -22,5 +20,15 @@ public:
     
     }
 
+};
+```
+
+## Correção da classe
+
+A classe após a correção de Liskov agora pode ser substituido sem alterar nenhuma das propriedades do programa
+
+```Cpp
+class Ostrich : public Bird {
+    // Ostrich não pode voar, então não herda de FlyingBird
 };
 ```
