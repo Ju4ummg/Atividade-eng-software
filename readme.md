@@ -76,11 +76,11 @@ public:
 };
 ```
 
-#Composição e herança
+# Composição e herança
 
 Composição é um princípio onde uma classe é composta de uma ou mais instâncias de outras classes, formando uma relação "tem um". Em vez de uma classe herdar atributos e métodos de outra, ela contém objetos de outras classes. Já a herança é um mecanismo que permite criar uma nova classe baseada em uma classe existente, herdando seus atributos e métodos.
  
-##Classe que não segue o princípio
+## Classe que não segue o princípio
 
 ```Cpp
 #include <iostream>
@@ -133,7 +133,7 @@ int main() {
 
 ```
 
-##Classe corrigida
+## Classe corrigida
 
 Classe corrigida com herança:
 
@@ -178,14 +178,14 @@ Classe corrigida com composição:
 ```Cpp
 class Motor {
 public:
-    Motor(std::string tipo) : tipo(tipo) {}
+    Motor(std::string tipo) : tipo(tipo) {}}
 ```
 
-#Princípio da responsabilidade única:
+# Princípio da responsabilidade única:
 
 O Princípio da Responsabilidade Única (SRP - Single Responsibility Principle) afirma que uma classe deve ter apenas uma única razão para mudar, ou seja, ela deve ter apenas uma responsabilidade ou função específica.
 
-##Classe que não segue o princípio:
+## Classe que não segue o princípio:
 ```Cpp
 class Relatorio {
 public:
@@ -212,7 +212,7 @@ private:
 };
 ```
 
-##Classe corrigida
+## Classe corrigida
 
 ```Cpp
 class Relatorio {
